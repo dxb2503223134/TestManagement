@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TestManagement.Models;
+using TestManagement.ViewModels;
 
 namespace TestManagement.Controllers
 {
@@ -25,9 +26,24 @@ namespace TestManagement.Controllers
 
         public IActionResult Details()
         {
-            var model = _studentRepository.GetStudent(1);
-            //return View("~/MyViews/Test.cshtml");
-            return View("../../MyViews/Details"); //去掉后缀
+            //var model = _studentRepository.GetStudent(1);
+
+            //ViewBag.PageTitle = "学生详情";
+            //ViewBag.Student = model;
+
+            //ViewData["PageTitle"] = "StudentDetails";
+            //ViewData["Student"] = model;
+
+            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel
+            {
+                Student = _studentRepository.GetStudent(1),
+                PageTitle = "Student Details"
+            };
+
+            return View(homeDetailsViewModel);
+
+            //return View("~/MyViews/Test.cshtml"); //带上后缀
+            //return View("../../MyViews/Details"); //去掉后缀
         }
 
         public string Test()
