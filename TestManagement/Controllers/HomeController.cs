@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -21,11 +22,17 @@ namespace TestManagement.Controllers
             // 返回学生名字
             return _studentRepository.GetStudent(1).Name;
         }
+
         public IActionResult Details()
         {
             var model = _studentRepository.GetStudent(1);
             //return View("~/MyViews/Test.cshtml");
             return View("../../MyViews/Details"); //去掉后缀
+        }
+
+        public string Test()
+        {
+            return string.Empty;
         }
     }
 }
