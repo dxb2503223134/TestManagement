@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <Folder Include="Views\Test\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>
