@@ -14,5 +14,6 @@ namespace TestManagement.Models
         public string Name { get; set; }
         public string ClassName { get; set; }
         public string Email { get; set; }
+        public string Test { get; set; }
     }
 }
