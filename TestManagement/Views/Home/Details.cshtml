@@ -1,19 +1,18 @@
 ﻿@*@using TestManagement.Models*@
 @*@model TestManagement.Models.Student*@
 @model TestManagement.ViewModels.HomeDetailsViewModel
-@{
-    //Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "学生详情页";
-}
 
-@*<h3>@ViewData["PageTitle"]</h3>*@
-@*<h3>@ViewBag.PageTitle</h3>*@
-<h3>@Model.PageTitle</h3>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @*<h3>@ViewData["PageTitle"]</h3>*@
+    @*<h3>@ViewBag.PageTitle</h3>*@
+    <h3>@Model.PageTitle</h3>
 
-<div>姓名: @Model.Student.Name</div>
-<div>邮箱: @Model.Student.Email</div>
-<div>班级: @Model.Student.ClassName</div>
-
-@section Scripts{ 
-    <script src="~/js/CustomScript.js"></script>
-}
+    <div>姓名: @Model.Student.Name</div>
+    <div>邮箱: @Model.Student.Email</div>
+    <div>班级: @Model.Student.ClassName</div>
+</body>
+</html>
